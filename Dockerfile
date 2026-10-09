@@ -3,6 +3,8 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 RUN mvn clean package -DskipTests
-FROM quay.io/wildfly/wildfly:latest-jdk17
-COPY --from=build /app/target/DreamHouse-1.0-SNAPSHOT.war /opt/jboss/wildfly/standalone/deployments/ROOT.war
-CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0"]
+
+FROM icr.io/appcafe/open-liberty:kernel-slim-java17-openj9-ubi
+COPY --from=build /app/target/DreamHouse-1.0-SNAPSHOT.war /config/dropins/ROOT.war
+COPY src/main/liberty/server.xml /config/server.xml
+EXPOSE 9080
