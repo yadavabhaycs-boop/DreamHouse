@@ -1,0 +1,27 @@
+CREATE DATABASE IF NOT EXISTS dreamhouse_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE dreamhouse_db;
+CREATE TABLE IF NOT EXISTS users (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(254) NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  role ENUM('USER','ADMIN') NOT NULL DEFAULT 'USER',
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY uq_users_email (email)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS saved_designs (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  user_id BIGINT UNSIGNED NOT NULL,
+  category VARCHAR(40) NOT NULL,
+  width_ft DECIMAL(7,2) NOT NULL,
+  length_ft DECIMAL(7,2) NOT NULL,
+  design_name VARCHAR(160) NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  items_json JSON NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  KEY ix_saved_designs_user_created (user_id, created_at),
+  CONSTRAINT fk_saved_designs_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;

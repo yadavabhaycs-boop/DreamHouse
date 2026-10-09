@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>My saved designs — DreamHouse</title>
+  <link rel="stylesheet" href="css/style.css?v=6"><link rel="stylesheet" href="css/auth.css?v=6"><link rel="stylesheet" href="css/generator.css?v=6">
+  <script src="js/saved-designs.js?v=6" defer></script>
+</head>
+<body class="generator-page saved-page">
+  <header class="site-header">
+    <div class="header-leading"><a class="brand" href="index.html"><span class="brand-mark">D</span><span class="brand-copy"><strong>DREAMHOUSE</strong><small>SMART LAYOUT GENERATOR</small></span></a><a class="button button-outline home-link" href="index.html">← Main page</a></div>
+    <nav class="generator-nav"><a href="profile.html">Profile details</a><a href="generator.html">Design a space</a><a href="dashboard.html">My workspace</a><form method="post" action="auth/logout"><button class="button button-outline" type="submit">Log out</button></form></nav>
+  </header>
+  <main class="generator-main">
+    <section class="generator-intro saved-intro"><p class="eyebrow">YOUR PERSONAL COLLECTION</p><h1>My saved <span>designs.</span></h1><p>Layouts you save are kept with your account, ready to revisit later.</p></section>
+    <p class="saved-status" id="saved-status" role="status">Loading your saved designs…</p>
+    <section class="design-grid" id="saved-design-grid" aria-live="polite"></section>
+    <p class="saved-empty" id="saved-empty" hidden>You haven’t saved a design yet. Generate some ideas and press <strong>Save design</strong> on your favourite.</p>
+  </main>
+  <footer class="auth-footer">Your ideas, saved in one place.</footer>
+</body>
+</html>

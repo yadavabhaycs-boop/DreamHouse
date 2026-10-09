@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="DreamHouse helps you explore thoughtful layouts for your space.">
+  <title>DreamHouse — Smart Layout Generator</title>
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <script src="js/main.js?v=6" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-leading">
+      <a class="brand" href="index.html" aria-label="DreamHouse home">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span class="brand-copy"><strong>DREAMHOUSE</strong><small>SMART LAYOUT GENERATOR</small></span>
+      </a>
+    </div>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a class="nav-link" id="explore-link" href="#categories">Explore</a>
+      <span id="guest-nav"><button class="button button-outline" type="button" data-open-auth>Log in</button>
+      <button class="button button-dark" type="button" data-open-auth>Create account <span aria-hidden="true">↗</span></button></span>
+      <span id="member-nav" hidden><a class="member-link" href="profile.html">Profile details</a>
+      <a class="member-link" href="generator.html">Designs</a>
+      <a class="member-link" href="saved-designs.html">Saved designs</a>
+      <span class="member-welcome">Welcome, <strong id="member-name">User</strong></span>
+      <form method="post" action="auth/logout"><button class="button button-outline" type="submit">Log out</button></form></span>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A smarter way to plan your space</p>
+        <h1>Design your space.<br><span>Find your layout.</span></h1>
+        <p class="hero-description">Tell us what you need. DreamHouse will help you explore six different conceptual layout ideas for your space.</p>
+        <a class="button button-dark hero-button" href="#categories">Choose a category <span aria-hidden="true">↓</span></a>
+        <p class="hero-note"><span aria-hidden="true">✳</span> Simple ideas for the spaces you imagine.</p>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a conceptual room layout">
+        <div class="art-stamp">YOUR SPACE,<br>YOUR WAY</div>
+        <div class="floor-plan">
+          <div class="plan-room room-living"><span class="room-icon">⌂</span><strong>LIVING</strong><small>01</small></div>
+          <div class="plan-room room-kitchen"><span class="room-icon">◇</span><strong>KITCHEN</strong><small>02</small></div>
+          <div class="plan-room room-bed"><span class="room-icon">▱</span><strong>BEDROOM</strong><small>03</small></div>
+          <div class="plan-room room-bath"><span class="room-icon">○</span><strong>BATH</strong><small>04</small></div>
+          <span class="plan-door" aria-hidden="true"></span>
+        </div>
+        <span class="art-spark spark-one" aria-hidden="true">✳</span>
+        <span class="art-spark spark-two" aria-hidden="true">✳</span>
+        <div class="art-caption">A little room to imagine.</div>
+      </div>
+    </section>
+
+    <section class="categories-section" id="categories">
+      <div class="section-heading">
+        <div><p class="eyebrow">START WITH A SPACE</p><h2>What are you designing?</h2></div>
+        <p id="category-hint">Choose a category to begin. Log in or create an account to generate layouts.</p>
+      </div>
+      <div class="category-grid" id="category-grid" aria-label="Design categories"></div>
+    </section>
+
+    <section class="how-section" aria-labelledby="how-title">
+      <div class="how-heading"><p class="eyebrow">THREE SIMPLE STEPS</p><h2 id="how-title">From an idea to a layout.</h2></div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number">01</span><span class="step-symbol">⌖</span><h3>Pick your space</h3><p>Choose the kind of place you want to plan.</p></article>
+        <article class="step-card"><span class="step-number">02</span><span class="step-symbol">✎</span><h3>Share your needs</h3><p>Enter dimensions and the features you want.</p></article>
+        <article class="step-card"><span class="step-number">03</span><span class="step-symbol">▦</span><h3>Explore six ideas</h3><p>Compare distinct conceptual 2D arrangements.</p></article>
+      </div>
+      <p class="concept-note">DreamHouse layouts are conceptual planning ideas, not certified architectural blueprints.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="index.html">DREAMHOUSE</a><span>Make room for good ideas.</span><span>Conceptual layouts for everyday spaces.</span></footer>
+
+  <dialog class="auth-dialog" id="auth-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Close" data-close-auth>×</button>
+    <span class="dialog-icon" aria-hidden="true">⌂</span>
+    <p class="eyebrow">YOUR NEXT IDEA STARTS HERE</p>
+    <h2 id="dialog-title">Log in to keep designing.</h2>
+    <p>Create an account or log in before generating layouts. We’ll keep your selected category ready for you.</p>
+    <div class="dialog-actions"><a class="button button-dark" href="login.html">Log in</a><a class="button button-outline" href="register.html">Create account</a></div>
+    <p class="dialog-footnote">Your selected category will be remembered on this device.</p>
+  </dialog>
+</body>
+</html>

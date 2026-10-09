@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your dashboard — DreamHouse</title>
+  <link rel="stylesheet" href="css/style.css?v=6"><link rel="stylesheet" href="css/auth.css?v=6">
+  <script src="js/dashboard.js?v=6" defer></script>
+</head>
+<body class="dashboard-page">
+  <header class="site-header">
+    <div class="header-leading"><a class="brand" href="index.html"><span class="brand-mark">D</span><span class="brand-copy"><strong>DREAMHOUSE</strong><small>SMART LAYOUT GENERATOR</small></span></a><a class="button button-outline home-link" href="index.html">← Main page</a></div>
+    <nav class="dashboard-nav"><a href="profile.html">Profile details</a><a href="generator.html">Designs</a><a class="button button-outline" href="saved-designs.html">My saved designs</a><form method="post" action="auth/logout"><button class="button button-outline" type="submit">Log out</button></form></nav>
+  </header>
+  <main class="dashboard-main">
+    <p class="eyebrow">YOUR WORKSPACE</p><h1>Welcome to DreamHouse.</h1>
+    <p class="dashboard-intro">Choose a space and tell us what you need. We’ll create six different conceptual 2D layout ideas for you.</p>
+    <div class="selected-category" id="selected-category-message" hidden></div>
+    <a class="button button-dark" id="start-designing" href="generator.html">Start designing <span aria-hidden="true">→</span></a>
+    <p class="dashboard-browse"><a href="index.html#categories">Or browse all categories</a></p>
+    <section class="dashboard-note"><span class="note-icon">✳</span><div><strong>Your ideas, your way</strong><p>Choose from six arrangements, then decide which one best fits your space.</p></div></section>
+  </main>
+  <footer class="auth-footer">Conceptual layouts for everyday spaces.</footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>Plan your space — DreamHouse</title>
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/auth.css?v=6">
+  <link rel="stylesheet" href="css/generator.css?v=6">
+  <script src="js/generator.js?v=6" defer></script>
+</head>
+<body class="generator-page">
+  <header class="site-header">
+    <div class="header-leading"><a class="brand" href="index.html"><span class="brand-mark">D</span><span class="brand-copy"><strong>DREAMHOUSE</strong><small>SMART LAYOUT GENERATOR</small></span></a><a class="button button-outline home-link" href="index.html">← Main page</a></div>
+    <nav class="generator-nav"><a href="profile.html">Profile details</a><a href="saved-designs.html">Saved designs</a><a href="dashboard.html">My workspace</a><form method="post" action="auth/logout"><button class="button button-outline" type="submit">Log out</button></form></nav>
+  </header>
+  <main class="generator-main">
+    <section class="generator-intro">
+      <p class="eyebrow">A GOOD PLAN STARTS WITH YOUR NEEDS</p>
+      <h1>Let’s shape your <span>space.</span></h1>
+      <p>Tell us the space size and what you need in it. DreamHouse will arrange six different conceptual 2D ideas.</p>
+    </section>
+    <form class="requirements-card" id="generator-form">
+      <div class="form-heading"><div><p class="eyebrow">YOUR REQUIREMENTS</p><h2>What are we planning?</h2></div><span class="step-chip">01 / 02</span></div>
+      <div class="requirements-grid">
+        <label class="field-wide">Space category<select name="category" id="category" required><option value="">Choose a category</option><option>House</option><option>Room</option><option>Apartment</option><option>Shop</option><option>Restaurant</option><option>Office</option><option>Event Hall</option><option>Classroom</option><option>Garden</option><option>Warehouse</option></select></label>
+        <label>Width <span>(feet)</span><input name="width" type="number" min="4" max="500" step="1" value="30" required></label>
+        <label>Length <span>(feet)</span><input name="length" type="number" min="4" max="500" step="1" value="40" required></label>
+      </div>
+      <div class="category-options" id="category-options" aria-live="polite"><p class="options-placeholder">Choose a category to see a few optional details.</p></div>
+      <div class="form-actions"><p>Ideas are conceptual and intended for early planning.</p><button class="button button-dark" id="generate-button" type="submit">Generate 6 ideas <span aria-hidden="true">→</span></button></div>
+      <p class="generator-message" id="generator-message" role="status" hidden></p>
+    </form>
+    <section class="results-section" id="results" hidden aria-live="polite">
+      <div class="results-heading"><div><p class="eyebrow">SIX WAYS TO IMAGINE IT</p><h2>Your layout ideas</h2><p id="results-summary"></p></div><span class="step-chip">02 / 02</span></div>
+      <div class="design-grid" id="design-grid"></div>
+      <p class="concept-disclaimer">These are simple planning concepts. They are not certified architectural drawings.</p>
+    </section>
+  </main>
+  <footer class="auth-footer">Make room for good ideas.</footer>
+</body>
+</html>
