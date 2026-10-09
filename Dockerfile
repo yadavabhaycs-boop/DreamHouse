@@ -6,4 +6,4 @@ RUN mvn clean package -DskipTests
 FROM quay.io/wildfly/wildfly:latest-jdk17
 COPY --from=build /app/target/DreamHouse-1.0-SNAPSHOT.war /opt/jboss/wildfly/standalone/deployments/DreamHouse.war
 EXPOSE 8080
-CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-J-Xms64m", "-J-Xmx256m", "-J-XX:MaxMetaspaceSize=128m"]
+CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0"]
